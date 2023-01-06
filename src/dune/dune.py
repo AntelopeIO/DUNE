@@ -531,6 +531,7 @@ class dune:
     def features():
         return ["KV_DATABASE",
                 "ACTION_RETURN_VALUE",
+                "CONFIGURABLE_WASM_LIMITS2",
                 "BLOCKCHAIN_PARAMETERS",
                 "GET_SENDER",
                 "FORWARD_SETCODE",
@@ -562,6 +563,11 @@ class dune:
             self.send_action('activate', 'eosio',
                              '["c3a6138c5061cf291310887c0b5c71'
                              'fcaffeab90d5deb50d3b9e687cead45071"]',
+                             'eosio@active')
+        elif code_name == "CONFIGURABLE_WASM_LIMITS2":
+            self.send_action('activate', 'eosio',
+                             '["d528b9f6e9693f45ed277af93474fd47'
+                             '3ce7d831dae2180cca35d907bd10cb40"]',
                              'eosio@active')
         elif code_name == "BLOCKCHAIN_PARAMETERS":
             self.send_action('activate', 'eosio',
